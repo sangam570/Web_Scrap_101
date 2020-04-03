@@ -1,8 +1,5 @@
-# pip install requests
-# pip install beautifulsoup4
 import requests
 from bs4 import BeautifulSoup
-
 
 def get_HTML_text(url):
     response = requests.get(url)
@@ -16,7 +13,6 @@ def get_HTML_text(url):
     else:
         raise Exception("oops something went wrong")
 
-
 response_page = get_HTML_text(
     "https://www.imdb.com/chart/boxoffice/?ref_=nv_ch_cht")
 
@@ -27,7 +23,6 @@ container = response_page_soup.find(
 # select table trs
 trs = container.find("tbody").findAll("tr")
 
-# file open
 try:
     f = open("movies.csv", "w")
     f.write("name, image \n")  # headers
