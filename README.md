@@ -5,7 +5,7 @@ scrap imdb top movies
 
 `git https://github.com/sangam570/Web_Scrap_101.git`
 
-`cd web_scrap_101`
+`cd Web_Scrap_101`
 
 `pip install -r requirements.txt`
 
